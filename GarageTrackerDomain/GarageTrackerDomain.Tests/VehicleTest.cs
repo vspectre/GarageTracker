@@ -8,8 +8,19 @@ namespace GarageTracker.Domain.Tests
     [TestClass]
     public class VehicleTest
     {
+
+        private Maker ArrangeStandardMaker()
+        {
+            return new Maker(1, "Maker 1");
+        }
+
+        private Model ArrangeStandardModel()
+        {
+            return new Model(1, 1, "Model 1");
+        }
+
         [TestMethod]
-        public void NewVehicleTest()
+        public void VehicleNewTest()
         {
             // Act
             Vehicle vehicle = new Vehicle();
@@ -86,7 +97,7 @@ namespace GarageTracker.Domain.Tests
         {
             // Arrange
             Vehicle vehicle = new Vehicle();
-            Maker maker = new Maker();
+            Maker maker = ArrangeStandardMaker();
 
             // Act
             vehicle.SetMake(maker);
@@ -112,15 +123,15 @@ namespace GarageTracker.Domain.Tests
         {
             // Arrange
             Vehicle vehicle = new Vehicle();
-            Maker make = new Maker() { Id = 1, Name = "Maker 1" };
-            Model model = new Model() { MakerId = 1 };
+            Maker make = ArrangeStandardMaker();
+            Model model = ArrangeStandardModel();
 
             // Act
             vehicle.SetMake(make);
             vehicle.SetModel(model);
 
             // Assert
-            Assert.AreEqual(vehicle.Make.Id, vehicle.Model.MakerId);
+            Assert.AreEqual(make.Id, vehicle.Model.MakerId);
             Assert.AreSame(model, vehicle.Model);
         }
 
@@ -142,7 +153,7 @@ namespace GarageTracker.Domain.Tests
         {
             // Arrange
             Vehicle vehicle = new Vehicle();
-            Model model = new Model();
+            Model model = ArrangeStandardModel();
 
             // Act
             vehicle.SetModel(model);

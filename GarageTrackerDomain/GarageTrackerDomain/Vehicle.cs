@@ -28,7 +28,7 @@ namespace GarageTracker.Domain
 
         public Vehicle()
         {
-            this.VehicleId = 0;
+            VehicleId = 0;
         }
 
         #endregion
@@ -43,7 +43,7 @@ namespace GarageTracker.Domain
             if (year > DateTime.Now.AddYears(1).Year)
                 throw new ArgumentOutOfRangeException("year", year, "Woah there Doc Brown, no Mr Fusion vehicles supported.");
 
-            this.Year = year;
+            Year = year;
         }
 
         public void SetMake(Maker make)
@@ -51,17 +51,17 @@ namespace GarageTracker.Domain
             if (make == null)
                 throw new ArgumentNullException("make");
 
-            this.Make = make;
+            Make = make;
         }
 
         public void SetModel(Model model)
         {
             if (model == null)
                 throw new ArgumentNullException("model");
-            if (this.Make == null)
+            if (Make == null)
                 throw new ArgumentException("The maker must be set first.");
-            if (model.MakerId != this.Make.Id)
-                throw new ArgumentNullException(String.Format("The model {0} does not belong to {1}, frankenstein'ing is bad m'kay.", model.Name, this.Make.Name));
+            if (model.MakerId != Make.Id)
+                throw new ArgumentNullException(string.Format("The model {0} does not belong to {1}, frankenstein'ing is bad m'kay.", model.Name, Make.Name));
 
             this.Model = model;
         }
