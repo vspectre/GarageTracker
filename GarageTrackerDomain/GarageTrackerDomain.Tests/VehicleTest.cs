@@ -48,12 +48,12 @@ namespace GarageTracker.Domain.Tests
         {
             // Arrange
             Vehicle vehicle = new Vehicle();
-
+            string vin = "1G1ZG57B984193351";
             // Act
-            vehicle.VIN = "1G1ZG57B984193351";
+            vehicle.VIN = vin;
 
             // Assert
-            Assert.AreEqual("1G1ZG57B984193351", vehicle.VIN);
+            Assert.AreEqual(vin, vehicle.VIN);
         }
 
         [TestMethod]

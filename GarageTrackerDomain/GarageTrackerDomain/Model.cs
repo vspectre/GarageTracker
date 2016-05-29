@@ -4,11 +4,11 @@ namespace GarageTracker.Domain
 {
     public class Model
     {
-        public int Id { get; }
+        public int Id { get; private set; }
 
-        public int MakerId { get; }
+        public int MakerId { get; private set; }
 
-        public string Name { get; }
+        public string Name { get; private set; }
 
         
         public Model(int id, int makerId, string name)

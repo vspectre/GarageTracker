@@ -38,6 +38,8 @@ namespace GarageTracker.Domain
 
         public void SetYear(int year)
         {
+            // To-Do: refactor to use a YearRangeProvider context
+            // Better yet, remove validation from this object and push out to a ProductValidation?
             if (year < 1886)
                 throw new ArgumentOutOfRangeException("year", year, "Nice try, Amédée Bollée, but Karl Benz had the first car in 1886.");
             if (year > DateTime.Now.AddYears(1).Year)
@@ -58,6 +60,7 @@ namespace GarageTracker.Domain
         {
             if (model == null)
                 throw new ArgumentNullException("model");
+            // To-Do: remove validation from this object and push out to a ProductValidation?
             if (Make == null)
                 throw new ArgumentException("The maker must be set first.");
             if (model.MakerId != Make.Id)
