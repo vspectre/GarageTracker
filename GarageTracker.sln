@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageTrackerDomain", "GarageTrackerDomain\GarageTrackerDomain\GarageTrackerDomain.csproj", "{199E4F43-841A-4D62-BF4B-17A5C2C3E3AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageTracker.Domain", "GarageTrackerDomain\GarageTrackerDomain\GarageTracker.Domain.csproj", "{199E4F43-841A-4D62-BF4B-17A5C2C3E3AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageTrackerDomain.Tests", "GarageTrackerDomain\GarageTrackerDomain.Tests\GarageTrackerDomain.Tests.csproj", "{80E302CB-95B1-4031-BF7D-B06643F4E6B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageTracker.Domain.Tests", "GarageTrackerDomain\GarageTrackerDomain.Tests\GarageTracker.Domain.Tests.csproj", "{80E302CB-95B1-4031-BF7D-B06643F4E6B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
