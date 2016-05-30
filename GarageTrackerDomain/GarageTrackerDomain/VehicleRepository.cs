@@ -14,6 +14,6 @@ namespace GarageTracker.Domain
 
         public abstract void Update(Vehicle vehicle);
 
-        public abstract Vehicle Remove(int id);
+        public abstract void Remove(int id);
     }
 }
